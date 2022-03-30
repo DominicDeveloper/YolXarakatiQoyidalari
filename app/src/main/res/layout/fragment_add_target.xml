@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddTarget">
+
+    <include android:id="@+id/include_custombar"
+        layout="@layout/custombar"/>
+
+
+
+            <ImageView
+                android:id="@+id/add_image"
+                app:layout_constraintTop_toBottomOf="@id/include_custombar"
+                android:src="@drawable/empty"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintWidth_percent="0.4"
+                app:layout_constraintHeight_percent="0.20"
+                android:layout_height="0dp"/>
+
+
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/add_image"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:id="@+id/add_puttext"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Yo’l belgisining rasmini qo’shish uchun rasm ustiga bosing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       app:layout_constraintTop_toBottomOf="@id/add_puttext"
+       android:layout_width="match_parent"
+       android:padding="23dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_height="0dp">
+
+       <EditText
+           android:id="@+id/add_target_name"
+           android:hint="Yo`l belgisining nomi"
+           android:padding="19dp"
+           android:background="@color/lightblack"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+
+       <EditText
+           android:id="@+id/add_target_name_info"
+           android:hint="@string/yo_l_belgisining_to_liq_tarifi"
+           android:padding="19dp"
+           android:gravity="top"
+           android:background="@color/lightblack"
+           app:layout_constraintTop_toBottomOf="@id/add_target_name"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           android:layout_width="match_parent"
+           app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintBottom_toTopOf="@id/myinp"
+           android:layout_height="0dp"/>
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_marginTop="10dp"
+           android:background="@color/lightblack"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+           app:layout_constraintTop_toBottomOf="@id/add_target_name_info"
+           app:layout_constraintBottom_toTopOf="@id/add_save_target"
+           android:id="@+id/myinp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <AutoCompleteTextView
+               android:inputType="none"
+               android:hint="Yo`l belgisining turi"
+               android:id="@+id/add_target_type"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+       </com.google.android.material.textfield.TextInputLayout>
+      <Button
+          android:id="@+id/add_save_target"
+          android:text="@string/saqlash"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:paddingStart="20dp"
+          android:paddingEnd="20dp"
+          android:paddingTop="10dp"
+          android:paddingBottom="10dp"
+          android:backgroundTint="@color/blue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/sartFragment">
+
+    <fragment
+        android:id="@+id/myHomeFragment"
+        android:name="com.dominic.ypx.MyHomeFragment"
+        android:label="fragment_my_home"
+        tools:layout="@layout/fragment_my_home" >
+        <action
+            android:id="@+id/action_myHomeFragment_to_addTarget"
+            app:destination="@id/addTarget"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_myHomeFragment_to_appinfoFragment2"
+            app:destination="@id/appinfoFragment"
+            app:popUpTo="@id/myHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ogohlantiruvchiFragment"
+        android:name="com.dominic.ypx.OgohlantiruvchiFragment"
+        android:label="fragment_ogohlantiruvchi"
+        tools:layout="@layout/fragment_ogohlantiruvchi" />
+    <fragment
+        android:id="@+id/imtiyozliFragment"
+        android:name="com.dominic.ypx.ImtiyozliFragment"
+        android:label="fragment_imtiyozli"
+        tools:layout="@layout/fragment_imtiyozli" />
+    <fragment
+        android:id="@+id/taqiqlovchiFragment"
+        android:name="com.dominic.ypx.TaqiqlovchiFragment"
+        android:label="fragment_taqiqlovchi"
+        tools:layout="@layout/fragment_taqiqlovchi" />
+    <fragment
+        android:id="@+id/buyuruvchiFragment"
+        android:name="com.dominic.ypx.BuyuruvchiFragment"
+        android:label="fragment_buyuruvchi"
+        tools:layout="@layout/fragment_buyuruvchi" />
+    <fragment
+        android:id="@+id/yoqtirganlarFragment"
+        android:name="com.dominic.ypx.YoqtirganlarFragment"
+        android:label="fragment_yoqtirganlar"
+        tools:layout="@layout/fragment_yoqtirganlar" >
+        <action
+            android:id="@+id/action_yoqtirganlarFragment_to_myHomeFragment"
+            app:destination="@id/myHomeFragment"
+            app:popUpTo="@id/yoqtirganlarFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_yoqtirganlarFragment_to_appinfoFragment"
+            app:destination="@id/appinfoFragment"
+            app:popUpTo="@id/myHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.dominic.ypx.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/appinfoFragment"
+        android:name="com.dominic.ypx.AppinfoFragment"
+        android:label="fragment_appinfo"
+        tools:layout="@layout/fragment_appinfo" >
+        <action
+            android:id="@+id/action_appinfoFragment_to_myHomeFragment"
+            app:destination="@id/myHomeFragment"
+            app:popUpTo="@id/appinfoFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_appinfoFragment_to_yoqtirganlarFragment"
+            app:destination="@id/yoqtirganlarFragment"
+            app:popUpTo="@id/appinfoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTarget"
+        android:name="com.dominic.ypx.AddTarget"
+        android:label="fragment_add_target"
+        tools:layout="@layout/fragment_add_target" />
+    <fragment
+        android:id="@+id/sartFragment"
+        android:name="com.dominic.ypx.SartFragment"
+        android:label="fragment_sart"
+        tools:layout="@layout/fragment_sart" >
+        <action
+            android:id="@+id/action_sartFragment_to_myHomeFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.dominic.ypx.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+</navigation>

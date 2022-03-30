@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MyHomeFragment">
+    <include
+        android:id="@+id/my_inclde"
+        layout="@layout/custombar"/>
+    <com.google.android.material.tabs.TabLayout
+        app:tabTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
+        android:elevation="3dp"
+        app:tabRippleColor="@color/white"
+        android:orientation="horizontal"
+        android:scrollbarStyle="insideInset"
+        android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/my_tablayout"
+        app:tabGravity="fill"
+        android:background="@color/blue"
+        app:tabSelectedTextColor="@color/white"
+        app:tabMode="scrollable"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_inclde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/my_viewpager2"
+        app:layout_constraintTop_toBottomOf="@id/my_tablayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

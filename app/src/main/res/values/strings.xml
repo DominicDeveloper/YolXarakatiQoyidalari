@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">YPX</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="saqlash">Saqlash</string>
+    <string name="qaysi_turga_kirishi">Qaysi turga kirishi</string>
+    <string name="yo_l_belgisining_to_liq_tarifi">Yo’l belgisining to’liq tarifi</string>
+    <string name="o_zgartirish">O`zgartirish</string>
+    <string name="xa">Xa</string>
+    <string name="yo_q">Yo`q</string>
+    <string name="rostanxam_o_chirmoqchimisiz">Rostanxam o`chirmoqchimisiz?</string>
+    <string name="warninig">Warninig</string>
+</resources>
